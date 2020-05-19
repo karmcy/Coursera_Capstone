@@ -1,0 +1,30 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f0\b\fs24 \cf0 The Data:\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f1\b0 \cf0 \
+All data is pulled from FourSquare API. Using our own ID and SID App keys\
+\
+For each neighborhood, we will send the latitude and longitude using the GET command below to get the list of venues.\
+\
+GET https://api.foursquare.com/v2/venues/search\
+\
+The radius will be set to \'93800m\'94 which is the equivalent of 0.5 miles\
+\
+Query will be set to \'93vegan\'94\
+\
+Example Query:\
+\
+venues/search?ll=40.7484,-73.9857&radius=800&query="vegan"\
+\
+The response JSON will then be imported into a Pandas Dataframe, and then added to our main Dataframe which will contain the unique vegan restaurants in a city.\
+\
+The final unique items will them be plotted on a map, and we will come up with cluster analysis for the areas which have the highest overlay of Vegan foodservice places on top of the city map \'96 offering the immigrant a chance to visually inspect where he would like to stay.\
+}
